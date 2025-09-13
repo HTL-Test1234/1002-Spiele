@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html id="website" lang="en" onkeydown="jump()" >
+<head>
+    <title> 1002 Games/Game1 </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=firefox">
+    <meta name="description" content="1002 Games">
+    <title>document</title>
+<style>
+    #website {
+        background-color: lightblue;
+    }
+    #character {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 500px;
+        left: 110px;
+        transition: top 300ms ease-out;
+    }
+    #enemy {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        top: 500px;
+        right: 100px;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <h1>Mein Erstes Spiel</h1>
+    <div id="character"></div>
+    <div id="enemy"></div>
+        <script>
+            let enemy_left = 1000;
+            let on_ground = true;
+            let points = 1;
+            setInterval(() => {
+            enemy.style.left = enemy_left + 'px';
+            enemy_left -= 10;
+                if (enemy_left < 150 && on_ground) {
+                    enemy_left = 1000
+                    alert('Game over');
+                    
+                }
+                if (enemy_left < 0) {
+                enemy_left = 1000;
+                
+            }
+            }, 10)
+    function jump() {
+        character.style.top = '250px';
+        on_ground = false;
+        setTimeout(() => {
+          character.style.top = '500px';  
+        }, 300);
+
+        setTimeout(() => {
+            on_ground = true;
+        }, 600);
+
+
+        setTimeout(() => {
+            points = points + 1
+        }, 100);
+    }        
+        </script>
+<body>
+
+</html>
