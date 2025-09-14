@@ -4,7 +4,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="with=device-width, initial-scale=1.0">
             <title>Number Guessing Game</title>
-
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JunusErgin/fast-ui@latest/style.css">
 
 
 
@@ -14,8 +14,18 @@
 
 
     </head>
-    <body>
+<body>
+            <header>Number Guessing Game</header>
+            <div class="container">
+                <h1 id="headline">Bitte Rate die Zahl von 0 bis 100!</h1>
+                <h2 id="displayTries">Versuche: 0</h2>
+                <form onsubmit="guessTheNumber(); return false;">
+                    <input id="myNumber" type="number" required placeholder="bitte Zahl eingeben">
+                    <button>Raten!</button>
+                </form>
+            </div>
 
-    </body>
+            <script src="NumberScript.js"></script>
+</body>
 
 </html>
